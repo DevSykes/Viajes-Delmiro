@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sara Z." />
+    <meta
+      name="description"
+      content="Viaja con Delmiro: los adultos entran gratis y los niños pagan. Descubre una nueva forma de viajar en familia."
+    />
+    <meta name="keywords" content="Web, HTML, CSS." />
+    <link rel="stylesheet" href="style.css" />
+    <title>Viajes Delmiro</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <h1>Viajes Delmiro</h1>
+        <p class="tagline">Donde los niños pagan y los padres descansan</p>
+      </div>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#promocion">Cómo funciona</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h2>¡Rompemos la hucha de los niños! Tú viajas GRATIS</h2>
+          <p>
+            En Viajes Delmiro rompemos las reglas. Tus hijos pagan, y tú te
+            vienes de acompañante de forma gratuita.
+          </p>
+          <div class="hero-offers">
+            <p class="offer-highlight">
+              Oferta estrella: 1 Adulto GRATIS por cada niño.
+            </p>
+          </div>
+          <div class="hero-buttons">
+            <a href="#destinos" class="btn btn-primary">Ver destinos</a>
+            <a href="#contacto" class="btn btn-secondary">Reservar ya</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinos" class="destinos container">
+        <h2 class="section-title">
+          Destinos donde ellos gastan y tú descansas
+        </h2>
+        <div class="destinos-grid">
+          <article class="card">
+            <div class="card-content">
+              <h3>Campamento de Supervivencia Pirineos</h3>
+              <p>
+                Tus hijos pagan por aprender a hacer fuego y montar tiendas de
+                campaña. Tú vas de supervisor en una hamaca.
+              </p>
+              <span class="price">Niños: 380€ | Adultos: ¡0€!</span>
+              <a href="#" class="btn btn-card">Saber más</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h3>Playa Aventura (Tenerife)</h3>
+              <p>
+                Piscinas con toboganes gigantes y club infantil. ¡Sol todo el
+                año!
+              </p>
+              <span class="price">Niños: 320€ | Adultos: 0€</span>
+              <a href="#" class="btn btn-card">Saber más</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h3>Safari en Cabárceno</h3>
+              <p>
+                Naturaleza y animales en semilibertad. Una experiencia educativa
+                inolvidable.
+              </p>
+              <span class="price">Niños: 210€ | Adultos: 0€</span>
+              <a href="#" class="btn btn-card">Saber más</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="promocion" class="info-section">
+        <div class="container">
+          <h2 class="section-title">¿Cómo funciona la promoción?</h2>
+          <div class="info-steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <h4>Elige el destino</h4>
+              <p>
+                Selecciona el hotel o pack vacacional que más le guste a tu
+                familia.
+              </p>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <h4>Paga la tarifa infantil</h4>
+              <p>
+                Mira cómo se tramita la reserva infantil mientras preparas tu
+                maleta a coste cero.
+              </p>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <h4>¡Tú viajas gratis!</h4>
+              <p>
+                Automáticamente se aplica el descuento del 100% en el
+                alojamiento del adulto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto container">
+        <h2 class="section-title">¿Hablamos?</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Cuéntanos qué buscas..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Enviar solicitud
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Viajes Delmiro. Todos los derechos reservados.</p>
+      <div class="footer-info">
+        <span> 900 123 666</span> |
+        <span> Calle Delmiro, 42</span>
+      </div>
+    </footer>
+  </body>
+</html>
