@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Para que se vean los titulos cuando el botón te lleva a la sección */
+.destinos, .info-section, .contacto {
+  scroll-margin-top: 80px;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
