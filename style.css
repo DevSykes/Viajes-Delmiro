@@ -66,10 +66,9 @@ body {
   text-align: center;
 }
 
-.btn-primary, 
-.btn-primary:visited {
+.btn-primary {
+  background-color: #2daaa1;
   color: white;
-  text-decoration: none;
 }
 
 .btn-primary:hover {
