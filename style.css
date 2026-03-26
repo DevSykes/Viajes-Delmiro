@@ -77,16 +77,15 @@ body {
   transform: translateY(-2px);
 }
 
-.btn-secondary, 
-.btn-secondary:visited {
-  background-color: var(--secondary);
-  color: var(--dark);
-  text-decoration: none;
+.btn-secondary {
+  background-color: #e67e22;
+  color: white;
 }
 
 .btn-secondary:hover {
-  background-color: #dbb34f;
+  background-color: #d35400;
   transform: translateY(-2px);
+  color: white;
 }
 
 .btn-card {
