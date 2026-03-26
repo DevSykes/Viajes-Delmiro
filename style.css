@@ -1,9 +1,11 @@
 /* 1. ESTILOS GENERALES Y VARIABLES */
 
 :root {
-  --primary: #2a9d8f;
+  --primary: #2daaa1;    /* El turquesa claro que pediste */
+  --primary-dark: #218377; /* El tono oscuro para el hover */
   --secondary: #e9c46a;
-  --accent: #f4a261;
+  --accent: #e67e22;     /* Naranja vibrante para botones de reserva */
+  --accent-dark: #d35400;
   --danger: #e76f51;
   --dark: #264653;
   --light: #f8f9fa;
@@ -21,9 +23,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Para que se vean los titulos cuando el botón te lleva a la sección */
-.destinos, .info-section, .contacto {
-  scroll-margin-top: 80px;
+/* Ajuste para que el Header fijo no tape los títulos al navegar */
+section {
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -57,56 +59,51 @@ body {
   border-radius: 2px;
 }
 
-/* Botones */
+/* --- BOTONES CORREGIDOS --- */
 
 .btn {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 5px;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: bold;
   cursor: pointer;
   transition: var(--transition);
   border: none;
   text-align: center;
+  outline: none;
 }
 
-.btn-primary {
-  background-color: #2daaa1;
-  color: white;
+/* Botón "Ver destinos" (Hero) y botones de tarjetas */
+.btn-primary, .btn-card {
+  background-color: var(--primary) !important;
+  color: white !important;
 }
 
-.btn-primary:hover {
-  background-color: #218377;
+.btn-primary:hover, .btn-card:hover {
+  background-color: var(--primary-dark) !important;
   transform: translateY(-2px);
+  color: white !important;
 }
 
+/* Botón "Reservar ya" (Naranja) */
 .btn-secondary {
-  background-color: #e67e22;
-  color: white;
+  background-color: var(--accent) !important;
+  color: white !important;
 }
 
 .btn-secondary:hover {
-  background-color: #d35400;
+  background-color: var(--accent-dark) !important;
   transform: translateY(-2px);
-  color: white;
+  color: white !important;
 }
 
-.btn-card {
-  background-color: var(--primary); 
-  border: 2px solid var(--primary);
-  color: white;
-  padding: 8px 16px;
-  margin-top: 15px;
+/* Asegurar que los botones no cambien a azul/morado por el navegador */
+.btn:visited {
+  color: white !important;
 }
 
-.btn-card:hover {
-  background-color: #218377; 
-  border-color: #218377;
-  transform: translateY(-2px);
-}
-
-/* 2. CABECERA (flexbox) */
+/* 2. CABECERA (Sticky optimizado) */
 
 .header {
   background-color: var(--dark);
@@ -195,7 +192,7 @@ body {
   gap: 15px;
 }
 
-/* 4. DESTINOS ( CSS Grid) */
+/* 4. DESTINOS (CSS Grid) */
 
 .destinos-grid {
   display: grid;
@@ -210,6 +207,8 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   border-top: 5px solid var(--accent);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -219,6 +218,9 @@ body {
 
 .card-content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-content h3 {
@@ -231,6 +233,7 @@ body {
   margin: 15px 0;
   font-weight: bold;
   color: var(--danger);
+  margin-top: auto; /* Empuja el precio y botón al final para que queden alineados */
 }
 
 /* 5. SECCIÓN INFORMATIVA */
@@ -269,11 +272,6 @@ body {
   margin-bottom: 20px;
 }
 
-.step h4 {
-  color: var(--dark);
-  margin-bottom: 10px;
-}
-
 /* 6. CONTACTO */
 
 .contact-form {
@@ -305,14 +303,7 @@ body {
   font-family: inherit;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 5px rgba(42, 157, 143, 0.4);
-}
-
-/* 7. PIE DE PÁGINA (Flexbox) */
+/* 7. PIE DE PÁGINA */
 
 .footer {
   background-color: var(--dark);
@@ -326,54 +317,35 @@ body {
   font-size: 0.9rem;
 }
 
-/* 8. RESPONSIVE */
-
-/* Tablets y móviles grandes */
+/* 8. RESPONSIVE (Móviles y Tablets) */
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    gap: 15px;
+    position: relative; /* En móvil deja de ser sticky para no tapar pantalla */
     padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  section {
+    scroll-margin-top: 20px; /* Ya no hace falta tanto espacio arriba */
   }
 
   .nav-links {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .tagline {
+    display: none; /* Quitamos eslogan en móvil para ahorrar sitio */
+  }
+
+  .destinos-grid {
+    grid-template-columns: 1fr; /* Una tarjeta por fila en móviles */
   }
 
   .hero-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .destinos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* Móviles pequeños */
-@media (max-width: 480px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .destinos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn {
-    width: 100%;
+    font-size: 2rem;
   }
 }
