@@ -1,10 +1,10 @@
 /* 1. ESTILOS GENERALES Y VARIABLES */
 
 :root {
-  --primary: #2daaa1;    /* El turquesa claro que pediste */
-  --primary-dark: #218377; /* El tono oscuro para el hover */
+  --primary: #2daaa1;
+  --primary-dark: #218377;
   --secondary: #e9c46a;
-  --accent: #e67e22;     /* Naranja vibrante para botones de reserva */
+  --accent: #e67e22;
   --accent-dark: #d35400;
   --danger: #e76f51;
   --dark: #264653;
@@ -59,7 +59,7 @@ body {
   border-radius: 2px;
 }
 
-/* --- BOTONES CORREGIDOS --- */
+/* BOTONES */
 
 .btn {
   display: inline-block;
@@ -86,7 +86,7 @@ body {
   color: white !important;
 }
 
-/* Botón "Reservar ya" (Naranja) */
+/* Botón Reservar ya */
 .btn-secondary {
   background-color: var(--accent) !important;
   color: white !important;
@@ -98,12 +98,12 @@ body {
   color: white !important;
 }
 
-/* Asegurar que los botones no cambien a azul/morado por el navegador */
+/* Para que los botones no cambien a azul por el navegador */
 .btn:visited {
   color: white !important;
 }
 
-/* 2. CABECERA (Sticky optimizado) */
+/* 2. HEADER (flexbox) */
 
 .header {
   background-color: var(--dark);
@@ -233,7 +233,7 @@ body {
   margin: 15px 0;
   font-weight: bold;
   color: var(--danger);
-  margin-top: auto; /* Empuja el precio y botón al final para que queden alineados */
+  margin-top: auto;
 }
 
 /* 5. SECCIÓN INFORMATIVA */
@@ -328,7 +328,7 @@ body {
   }
 
   section {
-    scroll-margin-top: 20px; /* Ya no hace falta tanto espacio arriba */
+    scroll-margin-top: 20px;
   }
 
   .nav-links {
@@ -338,7 +338,7 @@ body {
   }
 
   .tagline {
-    display: none; /* Quitamos eslogan en móvil para ahorrar sitio */
+    display: none; /* QuitO eslogan en móvil para ahorrar sitio */
   }
 
   .destinos-grid {
