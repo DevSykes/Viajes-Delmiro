@@ -90,16 +90,17 @@ body {
 }
 
 .btn-card {
-  background-color: transparent;
+  background-color: var(--primary); 
   border: 2px solid var(--primary);
-  color: var(--primary);
+  color: white;
   padding: 8px 16px;
   margin-top: 15px;
 }
 
 .btn-card:hover {
-  background-color: var(--primary);
-  color: white;
+  background-color: #218377; 
+  border-color: #218377;
+  transform: translateY(-2px);
 }
 
 /* 2. CABECERA (flexbox) */
